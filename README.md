@@ -1,4 +1,4 @@
-# cecam-mosdef-workshops
+# mosdef-workshops
 Workshops for the [Molecular Simulation and Design Framework (MoSDeF)](https://mosdef.org/). MoSDeF is a suite of open-source Python tools that enable extensible and reproducible molecular simulations. 
 
 MoSDeF includes: [mBuild](https://github.com/mosdef-hub/mbuild) | [GMSO](https://github.com/mosdef-hub/gmso.git) | [Foyer](https://github.com/mosdef-hub/foyer.git)
@@ -8,10 +8,8 @@ MoSDeF includes: [mBuild](https://github.com/mosdef-hub/mbuild) | [GMSO](https:/
 
 # How to run these tutorials:
 
-## https://github.com/chrisjonesBSU/cecam-mosdef-workshops
-
 ## Use GitHub Codespaces:
-Click: [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/chrisjonesBSU/cecam-mosdef-workshops?quickstart=1)
+Click: [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/chrisjonesBSU/mosdef-workshops?quickstart=1)
 
 This launches a remotely-hosted Jupyter Lab instance with everything ready-to-go. You'll need a (free) GitHub account, and the first launch takes a few minutes while the environment is built. Jupyter Lab opens in a new browser tab on its own; if it doesn't, open the **Ports** tab and click the globe icon next to port 8888, or run in the terminal:
 
@@ -29,8 +27,8 @@ If you are on a MacOS or Linux machine, and already have the Anaconda package ma
 In your terminal run:
 
 ```bash
-git clone git@github.com:chrisjonesBSU/cecam-mosdef-workshops.git
-cd cecam-mosdef-workshops
+git clone git@github.com:chrisjonesBSU/mosdef-workshops.git
+cd mosdef-workshops
 conda env create -f environment.yml
 conda activate mosdef
 cd notebooks
@@ -39,7 +37,7 @@ jupyter lab
 
 **Note:** The git clone command above works if you have an SSH key set up. If not you can clone with HTTPS:
 
-`git clone https://github.com/chrisjonesBSU/cecam-mosdef-workshops.git`
+`git clone https://github.com/chrisjonesBSU/mosdef-workshops.git`
 
 This may prompt you for your GitHub login information.
 
