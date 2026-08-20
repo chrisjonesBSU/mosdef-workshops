@@ -18,6 +18,7 @@ dependencies:
   - pytest=9.1.1
   - garnett=0.7.1
   - openff-toolkit-base=0.18.1
+  - cgsmiles
   - openmm=8.5.2
   - gsd=5.0.1
   - freud=3.5.0

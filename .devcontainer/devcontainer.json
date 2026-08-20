@@ -1,0 +1,27 @@
+{
+  "name": "MoSDeF Workshop",
+  "build": {
+    "dockerfile": "../Dockerfile",
+    "context": ".."
+  },
+  "hostRequirements": {
+    "cpus": 4,
+    "memory": "16gb"
+  },
+  "forwardPorts": [8888],
+  "portsAttributes": {
+    "8888": {
+      "label": "Jupyter Lab",
+      "onAutoForward": "openBrowser"
+    }
+  },
+  "postAttachCommand": "conda run --no-capture-output -n mosdef jupyter lab --no-browser --ip=0.0.0.0 --port=8888 --ServerApp.token='' --ServerApp.password='' --ServerApp.root_dir=${containerWorkspaceFolder}/notebooks",
+  "customizations": {
+    "vscode": {
+      "extensions": ["ms-toolsai.jupyter", "ms-python.python"],
+      "settings": {
+        "python.defaultInterpreterPath": "/opt/conda/envs/mosdef/bin/python"
+      }
+    }
+  }
+}

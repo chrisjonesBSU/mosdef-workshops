@@ -10,10 +10,17 @@ MoSDeF includes: [mBuild](https://github.com/mosdef-hub/mbuild) | [GMSO](https:/
 
 ## https://github.com/chrisjonesBSU/cecam-mosdef-workshops
 
-## Use binder:
-Click: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/chrisjonesBSU/cecam-mosdef-workshops/main)   
+## Use GitHub Codespaces:
+Click: [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/chrisjonesBSU/cecam-mosdef-workshops?quickstart=1)
 
-This launches a remotely-hosted Jupyter Notebook instance with everything ready-to-go. This is recommended for anyone on a Windows machine, or anyone who does not already have the Anaconda package manager installed. Although, you can use this link regardless.
+This launches a remotely-hosted Jupyter Lab instance with everything ready-to-go. You'll need a (free) GitHub account, and the first launch takes a few minutes while the environment is built. Jupyter Lab opens in a new browser tab on its own; if it doesn't, open the **Ports** tab and click the globe icon next to port 8888, or run in the terminal:
+
+```bash
+cd notebooks
+jupyter lab
+```
+
+When you're finished, stop your machine at [github.com/codespaces](https://github.com/codespaces) using the `...` menu next to this repository.
 
 
 ## Use Locally:
