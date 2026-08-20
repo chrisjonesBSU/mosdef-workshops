@@ -22,9 +22,12 @@ When you're finished, stop your machine at [github.com/codespaces](https://githu
 
 
 ## Use Locally:
-If you are on a MacOS or Linux machine, and already have the Anaconda package manager installed, you can choose to build the environment and run the notebooks locally. It is possible that the notebooks run faster locally than using Binder. If you are on Windows and want to use these locally, you will have to run the commands below within Windows Subsystem for Linux (WSL).
+If you are on a MacOS or Linux machine, and already have the Anaconda package manager installed, you can choose to build the environment and run the notebooks locally. It is possible that the notebooks run faster locally than using Binder. If you are on Windows and want to use these locally, you will have to run the commands below within [Windows Subsystem for Linux (WSL)](https://learn.microsoft.com/en-us/windows/wsl/about).
 
-In your terminal run:
+
+**Note:** The commands below require having the anaconda (also known as conda) package manager installed. Installation instructions for Anaconda can be found here: https://www.anaconda.com/docs/getting-started/installation
+
+In your terminal run the following commands to clone this repository and build the conda environment:
 
 ```bash
 git clone git@github.com:chrisjonesBSU/mosdef-workshops.git
