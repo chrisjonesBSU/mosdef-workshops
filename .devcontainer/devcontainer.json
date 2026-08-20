@@ -1,9 +1,8 @@
 {
   "name": "MoSDeF Workshop",
-  "build": {
-    "dockerfile": "../Dockerfile",
-    "context": ".."
-  },
+  // Pre-built by .github/workflows/build-image.yml.
+  // NOTE: update the owner below after transferring the repo to the org.
+  "image": "ghcr.io/chrisjonesbsu/mosdef-workshop:latest",
   "hostRequirements": {
     "cpus": 4,
     "memory": "16gb"
@@ -15,7 +14,7 @@
       "onAutoForward": "openBrowser"
     }
   },
-  "postAttachCommand": "conda run --no-capture-output -n mosdef jupyter lab --no-browser --ip=0.0.0.0 --port=8888 --ServerApp.token='' --ServerApp.password='' --ServerApp.root_dir=${containerWorkspaceFolder}/notebooks",
+  "postAttachCommand": "conda run --no-capture-output -n mosdef jupyter lab --allow-root --no-browser --ip=0.0.0.0 --port=8888 --IdentityProvider.token='' --ServerApp.root_dir=${containerWorkspaceFolder}/notebooks",
   "customizations": {
     "vscode": {
       "extensions": ["ms-toolsai.jupyter", "ms-python.python"],

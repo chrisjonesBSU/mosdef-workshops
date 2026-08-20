@@ -26,6 +26,11 @@ RUN mamba update -n base --all -y && \
 # Auto-activate the workshop env in any terminal opened in the container
 RUN echo "conda activate mosdef" >> /root/.bashrc
 
+# Register the env as a named kernel so Jupyter and VS Code both find it
+# without having to guess at an interpreter
+RUN conda run -n mosdef python -m ipykernel install \
+      --prefix=/usr/local --name mosdef --display-name "MoSDeF"
+
 # Make RUN commands use `bash --login`: -- fixes conda init
 # https://pythonspeed.com/articles/activate-conda-dockerfile/
 SHELL ["/bin/bash", "--login", "-c"]

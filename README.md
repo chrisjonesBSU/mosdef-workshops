@@ -11,14 +11,27 @@ MoSDeF includes: [mBuild](https://github.com/mosdef-hub/mbuild) | [GMSO](https:/
 ## Use GitHub Codespaces:
 Click: [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/chrisjonesBSU/mosdef-workshops?quickstart=1)
 
-This launches a remotely-hosted Jupyter Lab instance with everything ready-to-go. You'll need a (free) GitHub account, and the first launch takes a few minutes while the environment is built. Jupyter Lab opens in a new browser tab on its own; if it doesn't, open the **Ports** tab and click the globe icon next to port 8888, or run in the terminal:
+This launches a remotely-hosted Jupyter Lab instance with everything ready-to-go. You'll need a (free) GitHub account. Startup takes a couple of minutes while the environment is downloaded.
+
+Jupyter Lab opens in a new browser tab on its own. If it doesn't, open the **Ports** tab and click the globe icon next to port 8888, or run in the terminal:
 
 ```bash
 cd notebooks
-jupyter lab
+jupyter lab --allow-root
 ```
 
-When you're finished, stop your machine at [github.com/codespaces](https://github.com/codespaces) using the `...` menu next to this repository.
+### When you are finished: stop and delete your Codespace
+
+Closing the browser tab does **not** shut the machine down. It keeps running, and keeps using your monthly GitHub allowance, until it times out. Shut it down yourself when you're done.
+
+1. Go to [github.com/codespaces](https://github.com/codespaces). This page lists every Codespace on your account. A green dot means it is still running.
+2. Click the `...` menu next to the `mosdef-workshops` entry.
+3. Choose **Stop codespace** to pause it. Your files and environment are kept, and it restarts in a few seconds. Use this if you want to come back to your work later.
+4. Choose **Delete** to remove it completely. Use this once you are finished with the tutorials.
+
+**Please delete rather than only stopping when you're done for good.** A stopped Codespace still uses your storage allowance; a deleted one uses nothing.
+
+**Note:** Anything you want to keep (edited notebooks, output files) must be downloaded before you delete. Right-click a file in the Jupyter Lab file browser and choose **Download**.
 
 
 ## Using On Your Own Computer:
