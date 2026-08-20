@@ -24,7 +24,7 @@ When you're finished, stop your machine at [github.com/codespaces](https://githu
 ## Using On Your Own Computer:
 **Note:** The commands below require having the anaconda (also known as conda) package manager installed. Installation instructions for Anaconda can be found here: https://www.anaconda.com/docs/getting-started/installation
 
-If you are on a MacOS or Linux machine, and have the Anaconda package manager installed, you can choose to build the environment and run the notebooks locally. It is possible that the notebooks run faster locally than using hosted services such as GitHub Codespaces. If you are on Windows and want to run these locally, you will have to run the commands below within [Windows Subsystem for Linux (WSL)](https://learn.microsoft.com/en-us/windows/wsl/about).
+If you are on a MacOS or Linux machine, and have the Anaconda package manager installed, you can choose to build the environment and run the notebooks locally. It is possible that the notebooks run faster locally than using hosted services such as GitHub Codespaces. If you are on Windows and want to run these locally, we recommend using [Windows Subsystem for Linux (WSL)](https://learn.microsoft.com/en-us/windows/wsl/about). Once you have WSL setup and running, use the commands below.
 
 
 In your terminal run the following commands to clone this repository and build the conda environment:
@@ -58,7 +58,9 @@ The **documentation** for each package is available on their repositories.
 
 **GitHub Repos:** [mBuild](https://github.com/mosdef-hub/mbuild) | [GMSO](https://github.com/mosdef-hub/gmso.git) | [Foyer](https://github.com/mosdef-hub/foyer.git)
 
-**Note about mBuild:** At the moment, the examples in `2-mBuild-Polymers` and `3-Polymer-Workflows` requires installing mBuild from source using the develop branch, as opposed to installing mBuild from Anaconda. 
+**Note about mBuild:** At the moment, the examples in `2-mBuild-Polymers` and `3-Polymer-Workflows` requires installing mBuild from source using the **develop branch**, as opposed to installing mBuild from conda-forge. 
+
+Install mBuild from source using the `develop` branch: 
 
 ```bash
 git clone https://github.com/mosdef-hub/mbuild
