@@ -2,7 +2,7 @@ name: mosdef
 channels:
   - conda-forge
 dependencies:
-  - python=3.12.13
+  - python=3.13
   - boltons=26.0.0
   - numba=0.65.1
   - numpy=2.2.6
@@ -40,7 +40,7 @@ dependencies:
   - hoomd=7.1.0
   - jupyterlab
   - pip:
-      - git+https://github.com/chrisjonesBSU/gmso.git@cecam
+      - git+https://github.com/chrisjonesBSU/gmso.git@main
       - git+https://github.com/mosdef-hub/foyer.git@main
       - git+https://github.com/mosdef-hub/forcefield-utilities.git@main
       - git+https://github.com/mosdef-hub/mbuild.git@develop
