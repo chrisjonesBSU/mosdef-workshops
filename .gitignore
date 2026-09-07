@@ -224,3 +224,9 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Workshop input files
+!files/**
+!notebooks/files/**
+files/**/.ipynb_checkpoints/
+notebooks/**/.ipynb_checkpoints/

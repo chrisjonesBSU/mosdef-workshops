@@ -14,12 +14,25 @@
       "onAutoForward": "openBrowser"
     }
   },
-  "postAttachCommand": "conda run --no-capture-output -n mosdef jupyter lab --allow-root --no-browser --ip=0.0.0.0 --port=8888 --IdentityProvider.token='' --ServerApp.root_dir=${containerWorkspaceFolder}/notebooks",
+  // Runs on every container start, including resume, and does not depend on an
+  // editor attach -- postAttachCommand was skipped on some launches
+  // (--skip-post-attach), which left port 8888 returning 502. Backgrounded so
+  // startup is not blocked; the [j] bracket keeps pgrep from matching this
+  // command's own shell, so a resume does not start a second server.
+  "postStartCommand": "pgrep -f \"[j]upyter-lab\" > /dev/null || nohup conda run --no-capture-output -n mosdef jupyter lab --allow-root --no-browser --ip=0.0.0.0 --port=8888 --IdentityProvider.token='' --ServerApp.root_dir=${containerWorkspaceFolder}/notebooks > /tmp/jupyterlab.log 2>&1 &",
   "customizations": {
     "vscode": {
       "extensions": ["ms-toolsai.jupyter", "ms-python.python"],
       "settings": {
-        "python.defaultInterpreterPath": "/opt/conda/envs/mosdef/bin/python"
+        "python.defaultInterpreterPath": "/opt/conda/envs/mosdef/bin/python",
+        // Point the extension at the conda install so it discovers the mosdef
+        // env instead of concluding no Python exists.
+        "python.condaPath": "/opt/conda/bin/conda",
+        // The "No Python found -- install uv?" prompt ships behind the Python
+        // extension's A/B experiments. Opting out suppresses it so attendees
+        // are not offered an unrelated Python from astral.sh.
+        "python.experiments.enabled": false,
+        "python.experiments.optOutFrom": ["All"]
       }
     }
   }
