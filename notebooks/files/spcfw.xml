@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ForceField name="spcfw-water" version="0.0.1">
+  <FFMetaData electrostatics14Scale="0.833333333" nonBonded14Scale="0.5" combiningRule="geometric">
+    <Units energy="kJ/mol" mass="amu" charge="elementary_charge" distance="nm"/>
+  </FFMetaData>
+  <AtomTypes expression="4*epsilon*((sigma/r)**12 - (sigma/r)**6)">
+    <ParametersUnitDef parameter="epsilon" unit="kJ/mol"/>
+    <ParametersUnitDef parameter="sigma" unit="nm"/>
+    <AtomType name="OW" atomclass="OW" element="O" mass="15.999" charge="-0.82" definition="O">
+      <Parameters>
+        <Parameter name="epsilon" value="0.649"/>
+        <Parameter name="sigma" value="0.3166"/>
+      </Parameters>
+    </AtomType>
+    <AtomType name="HW" atomclass="HW" element="H" mass="1.008" charge="0.41" definition="H">
+      <Parameters>
+        <Parameter name="epsilon" value="0.0"/>
+        <Parameter name="sigma" value="0.0"/>
+      </Parameters>
+    </AtomType>
+  </AtomTypes>
+  <BondTypes expression="0.5*k*(r-r_eq)**2">
+    <ParametersUnitDef parameter="k" unit="kJ/mol/nm**2"/>
+    <ParametersUnitDef parameter="r_eq" unit="nm"/>
+    <BondType name="HarmonicBondPotential" type1="OW" type2="HW">
+      <Parameters>
+        <Parameter name="k" value="443153.38"/>
+        <Parameter name="r_eq" value="0.1012"/>
+      </Parameters>
+    </BondType>
+  </BondTypes>
+  <AngleTypes expression="0.5*k*(theta - theta_eq)**2">
+    <ParametersUnitDef parameter="k" unit="kJ/mol/rad**2"/>
+    <ParametersUnitDef parameter="theta_eq" unit="rad"/>
+    <AngleType name="HarmonicAnglePotential" type1="HW" type2="OW" type3="HW">
+      <Parameters>
+        <Parameter name="k" value="317.5656"/>
+        <Parameter name="theta_eq" value="1.9764"/>
+      </Parameters>
+    </AngleType>
+  </AngleTypes>
+</ForceField>
