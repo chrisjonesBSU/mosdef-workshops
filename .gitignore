@@ -5,6 +5,8 @@
 *.data*
 *.mol2
 *.top*
+notebooks/polymer_solvation
+notebooks/files/methanol_ua.xml
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
