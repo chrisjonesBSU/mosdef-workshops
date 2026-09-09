@@ -71,7 +71,7 @@ The **documentation** for each package is available on their repositories.
 
 **GitHub Repos:** [mBuild](https://github.com/mosdef-hub/mbuild) | [GMSO](https://github.com/mosdef-hub/gmso.git) | [Foyer](https://github.com/mosdef-hub/foyer.git)
 
-**Note about mBuild:** At the moment, the examples in `2-mBuild-Polymers` and `3-Polymer-Workflows` requires installing mBuild from source using the **develop branch**, as opposed to installing mBuild from conda-forge. 
+**Note about mBuild:** At the moment, the examples in used in this workshop requires installing mBuild from source using the **develop branch**, as opposed to installing mBuild from conda-forge. 
 
 Install mBuild from source using the `develop` branch: 
 
